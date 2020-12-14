@@ -31,6 +31,7 @@ body {
 }
 .blog_name_container {
   position: relative;
+  text-align: left;
   /* background: var(--primary_); */
 }
 .blog_name_container::after {
@@ -83,9 +84,10 @@ body {
 .blog_card {
   margin: 1rem 0;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border-bottom: 4px solid #f1f1f1;
   background: #f5f5f578;
-  position: relative;
   transition: 0.3s ease-in-out;
 }
 
@@ -94,42 +96,25 @@ body {
   height: 3px;
   background: #66666678;
 }
-
-/* .blog_card:after {
-  content: "";
-  width: 100%;
-  height: 3px;
-  background: #000;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-} */
 .blog_card:hover {
   transform: translateY(-10px);
 }
 
 .blog_card .flex_image {
-  /* width: 20%; */
   flex: 1 1 20%;
 }
 .blog_card .flex_desc {
-  /* width: 80%; */
-  flex: 1 1 80%;
-  /* height: 12rem; */
+  flex: 1 1 70%;
 }
 .blog_card .blog_date h6 {
   color: black;
-}
-
-.blog_card img {
-  width: 100%;
-  height: 12rem;
-  object-fit: cover;
+  text-align: start;
 }
 .flex_image img {
   object-fit: fill;
-  width: 100%;
-  height: 10rem;
+  max-width: 20rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 /* footer */
@@ -144,17 +129,22 @@ body {
 }
 .footer_div {
   background-color: var(--primary_);
-  padding: 1.5rem 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .footer_div_media {
   background-color: var(--primary_);
   text-align: right;
-  padding: 1rem 1rem;
+  padding: 0 1rem 1rem 0;
   color: white;
 }
 .footer_div_media span {
   color: goldenrod;
   font-size: 0.9rem;
+}
+.footer_div_media a:hover {
+  text-decoration: none;
 }
 
 .footer_div_media h6 {
@@ -187,15 +177,41 @@ body {
 .footer_div_two img {
   height: 5rem;
 }
-
 .footer_div_two .logo2 {
   align-self: flex-end;
 }
+.footer_div_two img {
+  width: 250px;
+  height: 150px;
+}
+@media only screen and (max-width: 888px) {
+  .footer_div_two {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer_div_two img {
+    width: 25vw;
+    height: 25vw;
+  }
+  .footer_div_two .logo1 h1 {
+    font-size: 1rem;
+  }
+}
+
 /* carosel */
 .custom_carosel {
   height: 70vh;
   object-fit: cover;
 }
+
+@media only screen and (max-width: 888px) {
+  .custom_carosel {
+    height: 100vw;
+    object-fit: cover;
+  }
+}
+
 .carousel-inner p {
   font-size: 2rem;
   color: #fff;
@@ -309,13 +325,13 @@ header .navItem span {
 }
 
 .book_item {
-  box-sizing: border-box;
   padding: 10px 20px;
   display: block;
   text-decoration: none;
 }
 
 .book_item .book_header h2 {
+  text-align: start;
   font-size: 2.5rem;
   color: #000;
   margin: 4px 0px 0px 0px;
@@ -341,11 +357,13 @@ header .navItem span {
   font-size: 1.5rem;
   color: #5f5f5f;
   font-weight: 600;
+  text-align: start;
 }
 .book_item .book_desc {
   font-size: 1rem;
   color: #5f5f5f;
   font-weight: 700;
+  text-align: start;
 }
 
 .book_item .book_items {
@@ -608,6 +626,7 @@ tr:nth-child(even) {
 .br_container {
   box-sizing: border-box;
   padding: 20px;
+  min-height: 80vh;
 }
 
 .br_container .br_header {
@@ -640,6 +659,14 @@ tr:nth-child(even) {
   font-size: 20px;
   font-weight: 300;
   line-height: 27px;
+  width: 50%;
+  margin: 0 auto;
+}
+.br_container .br_review h5 {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
 }
 
 .br_container .br_box {

@@ -1,59 +1,64 @@
-import React, { Component } from 'react'
-import {GiHamburgerMenu} from 'react-icons/gi'
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 // import Nav from './Sidenav/Nav'
-import SidenavItems from './Sidenav/Sidenav_items';
-
+import SidenavItems from "./Sidenav/Sidenav_items";
 
 export default class Header extends Component {
-    state={
-        showNav:false
-    }
+  state = {
+    showNav: false,
+  };
 
-    showBurger =()=>{
-        return <>
-          <div className="open_nav">
-        <GiHamburgerMenu 
-        onClick={()=>this.setState({
-            showNav:true
-        })}
-        style={{
-            color:'#000',
-            padding: '0px',
-            cursor: 'pointer',
-            fontSize: '40px',
-            marginLeft: '1rem'
-        }} />
-
-        </div> 
+  showBurger = () => {
+    return (
+      <>
+        <div className="open_nav">
+          <GiHamburgerMenu
+            onClick={() =>
+              this.setState({
+                showNav: true,
+              })
+            }
+            style={{
+              color: "#000",
+              padding: "0px",
+              cursor: "pointer",
+              fontSize: "40px",
+              marginLeft: "1rem",
+            }}
+          />
+        </div>
         {/* <Nav 
         showNav={this.state.showNav}
         onHideNav={()=>this.onHideNav()}
         /> */}
-        </>
-    }
+      </>
+    );
+  };
 
-    showNormalNav=()=>{
-        return <div>
+  showNormalNav = () => {
+    return (
+      <div>
         <SidenavItems />
-        </div>
-    }
+      </div>
+    );
+  };
 
-    onHideNav=()=>{
-        this.setState({showNav:false})
-    }
-    render() {
-        return (
-            <>
-            <header>
-                <Link to="/" className="logo">
-                Upholding Rights of Minorities Beyond Borders (URMB) <br></br> South Asia
-                </Link>
-            </header>
-               {/* {window.innerWidth < 768 ? 
+  onHideNav = () => {
+    this.setState({ showNav: false });
+  };
+  render() {
+    return (
+      <>
+        <header>
+          <Link to="/" className="logo">
+            Campaign Against Chaupadi for <br></br>"Dignified Menstruation"
+          </Link>
+        </header>
+        {/* {window.innerWidth < 768 ? 
                this.showBurger() :  */}
-               {this.showNormalNav()}
-               </>
-        )
-    }
+        {this.showNormalNav()}
+      </>
+    );
+  }
 }

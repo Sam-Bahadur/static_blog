@@ -11,49 +11,49 @@ const SidenavItems = () => {
             link:'/',
             restricted: false
         },
-        {
-            type:'navItem',
-            icon:'home',
-            text:'My profile',
-            link:'/user',
-            restricted: true
-        },
-        {
-            type:'navItem',
-            icon:'home',
-            text:'Add User',
-            link:'/user/register',
-            restricted: false
-        },
-        {
-            type:'navItem',
-            icon:'home',
-            text:'Login',
-            link:'/login',
-            restricted: false,
-            exclude: true
-        },
-        {
-            type:'navItem',
-            icon:'home',
-            text:'My Blogs',
-            link:'/user/user_blogs',
-            restricted: true
-        },
-        {
-            type:'navItem',
-            icon:'home',
-            text:'Add Blog',
-            link:'/user/add',
-            restricted: true
-        },
-        {
-            type:'navItem',
-            icon:'home',
-            text:'Log out',
-            link:'/user/logout',
-            restricted: true
-        }
+        // {
+        //     type:'navItem',
+        //     icon:'home',
+        //     text:'My profile',
+        //     link:'/user',
+        //     restricted: true
+        // },
+        // {
+        //     type:'navItem',
+        //     icon:'home',
+        //     text:'Add User',
+        //     link:'/user/register',
+        //     restricted: false
+        // },
+        // {
+        //     type:'navItem',
+        //     icon:'home',
+        //     text:'Login',
+        //     link:'/login',
+        //     restricted: false,
+        //     exclude: true
+        // },
+        // {
+        //     type:'navItem',
+        //     icon:'home',
+        //     text:'My Blogs',
+        //     link:'/user/user_blogs',
+        //     restricted: true
+        // },
+        // {
+        //     type:'navItem',
+        //     icon:'home',
+        //     text:'Add Blog',
+        //     link:'/user/add',
+        //     restricted: true
+        // },
+        // {
+        //     type:'navItem',
+        //     icon:'home',
+        //     text:'Log out',
+        //     link:'/user/logout',
+        //     restricted: true
+        // }
     ]
 
     const element = (item,i) =>(

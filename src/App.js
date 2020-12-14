@@ -1,21 +1,21 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Body from './components/Body/Body';
+import BlogView from './components/Blog/BlogView'
+import { NotFound } from './components/NotFound';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter >
       <Header />
       <Switch>
-      <Route path="/" exact Component={Body} />
+      <Route path="/blogs/:id" exact component={BlogView} />
+      <Route path="/" exact component={Body} />
+      <Route exact component={NotFound} />
       </Switch>
-      <Body />
       <Footer />
-      </BrowserRouter>
-      
     </div>
   );
 }
